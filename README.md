@@ -2,14 +2,14 @@
 
 A portable, containerization of Google's [Bloaty](https://github.com/google/bloaty) a size profiler for binaries. Intended to be used from CI pipelines.
 
+Supports amd64 and arm64 architectures.
+
 # Usage
 
 The image is available on Docker Hub as `mc7h/bloaty`. You can pull and run it with the following command:
 
 ```
 docker run mc7h/bloaty
-```
-```
 ```
 
 Being a container you will need to volume map the file(s) you wish to scan. For example:
@@ -41,9 +41,6 @@ $ docker run --volume ~/Downloads:/home mc7h/bloaty /home/terraform
    0.0%      36   0.0%      36    .note.gnu.build-id
    0.0%      20   0.0%      20    [1 Others]
  100.0%  83.7Mi 100.0%  83.8Mi    TOTAL
-
-```
-```
 ```
 
 # Local Building / Development
